@@ -29,14 +29,17 @@ MORSE_KEY = {
   '--..' => 'Z'
 }.freeze
 
-def decord_word(morse_code)
+def decode_char(morse_code)
+  return MORSE_KEY[morse_code]
+end
+
+def decode_word(morse_code)
   word = ''
   morse_code = morse_code.split(' ')
   morse_code.each do |letter|
-    word += MORSE_KEY[letter]
+    word += decode_char(letter)
   end
   return word
 end
 
-# word = ''
-# -- .- => ['--', '.-'] each (l) => word += MORSE_KEY[l]
+
