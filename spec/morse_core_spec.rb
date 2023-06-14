@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../morse_code'
 
 # morse core to text @rspec

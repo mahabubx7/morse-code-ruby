@@ -1,4 +1,4 @@
-# Decode morse code into string
+# frozen_string_literal: true
 
 MORSE_KEY = {
   '.-' => 'A',
@@ -30,7 +30,7 @@ MORSE_KEY = {
 }.freeze
 
 def decode_char(morse_code)
-  return MORSE_KEY[morse_code]
+  MORSE_KEY[morse_code]
 end
 
 def decode_word(morse_code)
@@ -39,7 +39,5 @@ def decode_word(morse_code)
   morse_code.each do |letter|
     word += decode_char(letter)
   end
-  return word
+  word
 end
-
-
