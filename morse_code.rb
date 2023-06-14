@@ -39,3 +39,19 @@ def decode_word(morse_code)
   end
   word
 end
+
+def decode(morse_code)
+  decoded = ''
+  not_first = false
+  morse_code_splited = morse_code.split(/\s\s\s/i)
+  morse_code_splited.each do |word|
+    if not_first
+      decoded += ' '
+    else
+      not_first = true
+    end
+
+    decoded += decode_word(word)
+  end
+  decoded
+end

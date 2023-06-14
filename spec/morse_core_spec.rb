@@ -9,4 +9,8 @@ describe 'Unit tests for morse code to string' do
     expect(decode_word('-- .- .... .- -... ..- -...')).to eq('MAHABUB')
     expect(decode_word('.-.. .- .-- .-. . -. -.-. .')).to eq('LAWRENCE')
   end
+
+  it 'returns morse code to sentence' do
+    expect(decode('-- -.--   -. .- -- .')).to eq('MY NAME')
+  end
 end
