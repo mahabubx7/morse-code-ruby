@@ -1,6 +1,6 @@
-require_relative '../morse_code'
+# frozen_string_literal: true
 
-# morse core to text @rspec
+require_relative '../morse_code'
 
 describe 'Unit tests for morse code to string' do
   it 'returns morse code to letter' do
