@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 MORSE_KEY = {
   '.-' => 'A',
   '-...' => 'B',
@@ -35,8 +33,8 @@ end
 
 def decode_word(morse_code)
   word = ''
-  morse_code = morse_code.split(' ')
-  morse_code.each do |letter|
+  morse_code_splited = morse_code.split(/\s/i)
+  morse_code_splited.each do |letter|
     word += decode_char(letter)
   end
   word
